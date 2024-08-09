@@ -150,8 +150,8 @@
 
                           <a style="display: none;" href="#" class="btn btn-primary">Current week: <span
                               id="week-type"></span></a>
-                          <a href="https://www.linkedin.com/in/tonynazarov/" target="_blank"
-                            class="btn btn-primary">Let's have a call, and I'll share my <b>secret</b>.</a>
+                          <a id="cta" href="https://www.linkedin.com/in/tonynazarov/" target="_blank"
+                            class="btn btn-primary"></a>
                         </div>
                       </div>
                     </div>
@@ -247,35 +247,36 @@
             <div class="lm-info-block gray-default">
               <i class="linecons linecons-star"></i>
               <h4>Pancakes Baked</h4>
-              <span class="lm-info-block-value">587</span>
+              <span class="lm-info-block-value">6154</span>
               <span class="lm-info-block-text"></span>
             </div>
           </div>
           <div class="col-xs-12 col-sm-3">
             <div class="lm-info-block gray-default">
               <i class="linecons linecons-cup"></i>
-              <h4>Tea Cups Consumed</h4>
-              <span class="lm-info-block-value">1,286</span>
+              <h4>Tea+Coffee Consumed</h4>
+              <span class="lm-info-block-value">3789</span>
+              <span class="lm-info-block-text"></span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <div class="lm-info-block gray-default">
+              <i class="linecons linecons-like"></i>
+              <h4>Impressed colleagues</h4>
+              <span class="lm-info-block-value">239</span>
+              <span class="lm-info-block-text"></span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <div class="lm-info-block gray-default">
+              <i class="linecons linecons-user"></i>
+              <h4>Happy friends</h4>
+              <span class="lm-info-block-value">&#8734;</span>
               <span class="lm-info-block-text"></span>
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-3">
-            <div class="lm-info-block gray-default">
-              <i class="linecons linecons-data"></i>
-              <h4>Books Read</h4>
-              <span class="lm-info-block-value">> 20</span>
-              <span class="lm-info-block-text"></span>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-3">
-            <div class="lm-info-block gray-default">
-              <i class="linecons linecons-stack"></i>
-              <h4>Conferences Attended</h4>
-              <span class="lm-info-block-value">> 15</span>
-              <span class="lm-info-block-text"></span>
-            </div>
-          </div>
+
         </div>
         <!-- /Fun Facts -->
 
@@ -322,9 +323,59 @@
       return getWeekNumber(d) % 1 === 0;
     }
 
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
     window.addEventListener("load", (event) => {
       const span = document.getElementById("week-type");
-      span.textContent = isWeekForStudying(new Date()) ? 'knowledge review' : 'week of study';
+
+      if (span !== undefined) {
+        span.textContent = isWeekForStudying(new Date()) ? 'knowledge review' : 'week of study';
+      }
+
+
+      const cta = document.getElementById('cta');
+
+      function ContactMe(cta) {
+        if (cta !== undefined) {
+          const rand = getRandomInt(6);
+          let btnText = "";
+          let btnColour = "btn btn-primary"
+          switch (rand) {
+            case 0:
+              btnText = "Curious to find out more? Let’s grab a coffee and chat!";
+              btnColour = "btn btn-danger";
+              break;
+            case 1:
+              btnText = "Want to dive deeper? How about a call?";
+              break;
+            case 2:
+              btnText = "Let's have a call, and I'll share my <b>secret recipe</b>.";
+              btnColour = "btn btn-success";
+              break;
+            case 3:
+              btnText = "Curious to learn more? Let’s grab a coffee!";
+              btnColour = "btn btn-success";
+              break;
+            case 4:
+              btnText = "Eager to find out more? Let’s chat on a call!";
+              btnColour = "btn btn-info";
+              break;
+            case 5:
+              btnText = "Feeling intrigued? Let’s discuss it on a call!";
+              btnColour = "btn btn-secondary";
+              break;
+            case 6: btnText = "Wondering about the details? Let’s discuss them over coffee!";
+              break;
+          }
+
+          cta.innerHTML = btnText;
+          cta.className = btnColour;
+        }
+      }
+      ContactMe(cta);
+      setInterval(() => ContactMe(cta), 3000);
     });
   </script>
 </body>
