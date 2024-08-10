@@ -339,34 +339,25 @@
 
       function ContactMe(cta) {
         if (cta !== undefined) {
-          const rand = getRandomInt(6);
+          const rand = getRandomInt(3);
           let btnText = "";
           let btnColour = "btn btn-primary"
           switch (rand) {
             case 0:
-              btnText = "Curious to find out more? Let’s grab a coffee and chat!";
+              btnText = "Feeling intrigued? Let’s grab a coffee and chat!";
               btnColour = "btn btn-danger";
               break;
             case 1:
-              btnText = "Want to dive deeper? How about a call?";
+              btnText = "Curious? How about a call?";
+              btnColour = "btn btn-success";
               break;
             case 2:
-              btnText = "Let's have a call, and I'll share my <b>secret recipe</b>.";
-              btnColour = "btn btn-success";
+              btnText = "Got your attention? Let’s grab a coffee!";
+              btnColour = "btn btn-primary";
               break;
             case 3:
-              btnText = "Curious to learn more? Let’s grab a coffee!";
-              btnColour = "btn btn-success";
-              break;
-            case 4:
-              btnText = "Eager to find out more? Let’s chat on a call!";
-              btnColour = "btn btn-info";
-              break;
-            case 5:
               btnText = "Feeling intrigued? Let’s discuss it on a call!";
               btnColour = "btn btn-secondary";
-              break;
-            case 6: btnText = "Wondering about the details? Let’s discuss them over coffee!";
               break;
           }
 
