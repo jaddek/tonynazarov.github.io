@@ -66,16 +66,8 @@
 
           <div class="site-nav mobile-menu-hide">
             <ul class="leven-classic-menu site-main-menu">
-              <li class="menu-item menu-item-has-children">
-                <a href="/projectx/team/">ProjectX</a>
-                <ul class="sub-menu">
-                  <li class="menu-item">
-                    <a href="/projectx/team/">Team of Engineers</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/projectx/team/">Team of Speakers</a>
-                  </li>
-                </ul>
+              <li class="menu-item">
+                <a href="/projectx/team/index.html">ProjectX</a>
               </li>
 
               <li class="menu-item">
@@ -128,7 +120,7 @@
                             <div class="item">
                               <h5>Software Engineer</h5>
                               <h4>Make Pancakes | Develop Distributed Systems</h4>
-                              <p>Getting into the IT industry through making pancakes sounds </br>incredible, doesn't
+                              <p>Getting into the IT industry through making pancakes sounds <br/>incredible, doesn't
                                 it?
                               </p>
                               <p> </p>
@@ -143,7 +135,6 @@
                             </span>
                           </div>
                         </div>
-                        </p>
                         <div class=" home-buttons">
 
                           <a style="display: none;" href="#" class="btn btn-primary">Current week: <span
@@ -322,7 +313,7 @@
       return Math.floor(Math.random() * max);
     }
 
-    window.addEventListener("load", (event) => {
+    window.addEventListener("load", () => {
       const span = document.getElementById("week-type");
 
       if (span !== undefined) {
