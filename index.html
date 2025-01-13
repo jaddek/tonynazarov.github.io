@@ -2,7 +2,6 @@
 <html lang="en" class="no-js">
 
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JQPGM9QQG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,7 +12,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tony Nazarov | Software Engineer | Digital CV</title>
+  <title>Anton Nazarov | Software Engineer | Digital CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Anton Nazarov | Software Engineer | Personal page" />
   <meta name="keywords" content="" />
@@ -55,27 +54,10 @@
       <!-- Header -->
       <header id="site_header" class="header">
         <div class="header-content clearfix">
-
-          <!-- Text Logo -->
-          <div class="text-logo">
-            <a href="/">
-              <div class="logo-symbol">AN</div>
-              <div class="logo-text">Anton <span>Nazarov</span></div>
-            </a>
-          </div>
-
           <div class="site-nav mobile-menu-hide">
             <ul class="leven-classic-menu site-main-menu">
               <li class="menu-item">
-                <a href="/projectx/team/index.html">ProjectX</a>
-              </li>
-
-              <li class="menu-item">
                 <a href="/resume/">Resume</a>
-              </li>
-
-              <li class="menu-item">
-                <a href="/achievements">Achievements</a>
               </li>
 
               <li class="menu-item">
@@ -103,27 +85,17 @@
                   <div class="home-content">
                     <div class="row flex-v-align">
 
-                      <div class="col-sm-12 col-md-5 col-lg-5">
-                        <div class="home-photo">
-                          <div class="hp-inner" style="background-image: url(./image.png);">
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-12 col-md-7 col-lg-7">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
 
                         <div class="home-text hp-left">
                           <h1>Anton Nazarov</h1>
 
-                          <div class="owl-carousel text-rotation">
-
+                          <div>
                             <div class="item">
-                              <h5>Software Engineer</h5>
-                              <h4>Make Pancakes | Develop Distributed Systems</h4>
-                              <p>Getting into the IT industry through making pancakes sounds <br/>incredible, doesn't
-                                it?
-                              </p>
-                              <p> </p>
+                              <h2>Software Engineer</h2>
+                              <h4>Build Robust and Scalable Systems | Make Delicious
+                                Pancakes* | Traveller & Drone Pilot</h4>
+                              <p>* Pancakes are cautiously addictive</p>
                             </div>
                           </div>
                           <div class="post-tags">
@@ -135,7 +107,7 @@
                             </span>
                           </div>
                         </div>
-                        <div class=" home-buttons">
+                        <div class="home-buttons">
 
                           <a style="display: none;" href="#" class="btn btn-primary">Current week: <span
                               id="week-type"></span></a>
@@ -159,10 +131,9 @@
 
                     <div class="ci-text">
                       <h4>Software Engineer</h4>
-                      <p>With over 5 years of experience in software development, I’ve mastered every stage of the
-                        SDLC. My extensive work with major
-                        clients has honed my skills in flexibility, proactive problem-solving, and effective
-                        communication.</p>
+                      <p>Team-oriented software engineer passionate about building exceptional products collaboratively.
+                        Excellent communication and interpersonal skills, with a strong focus on fostering positive and
+                        productive team environments. Motivated to inspire and drive success!</p>
                     </div>
                   </div>
 
@@ -173,7 +144,7 @@
 
                     <div class="ci-text">
                       <h4>Traveller</h4>
-                      <p>I’ve visited 20 countries across both the Old and New Worlds and lived in 5 of them for
+                      <p>I’ve visited 20 countries across both the Old and New Worlds and lived in 6 of them for
                         extended periods. These experiences have shaped me into a curious and adaptable individual with
                         an open-minded approach. My global perspective enhances my ability to connect with diverse
                         people and tackle challenges with flexibility and insight.</p>
@@ -202,14 +173,13 @@
 
                   <div class="info-block-w-icon">
                     <div class="ci-icon">
-                      <i class="linecons linecons-megaphone"></i>
+                      <i class="linecons linecons-paperplane"></i>
                     </div>
 
                     <div class="ci-text">
-                      <h4>Event Host and Organiser</h4>
-                      <p>I organise meetups and technical events that bring together people who love sharing knowledge
-                        and connecting in a friendly, welcoming atmosphere. My goal is to foster meaningful connections
-                        and build a vibrant community where ideas can thrive and collaborations can grow.</p>
+                      I'm learning to harness the power and capabilities of FPV drones for flights with Radiomaster
+                      Tx16S. Having flown 200 hours opened up a new universe for me and the opportunity to be a bird in
+                      the sky. Mesmerising!
                     </div>
                   </div>
                 </div>
@@ -290,18 +260,11 @@
   <script src="./js/main.js"></script>
   <script type="text/javascript">
     function getWeekNumber(d) {
-      // Copy date so don't modify original
       d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-      // Set to nearest Thursday: current date + 4 - current day number
-      // Make Sunday's day number 7
       d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
-      // Get first day of year
       var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-      // Calculate full weeks to nearest Thursday
       var weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
 
-      console.log(weekNo);
-      // Return array of year and week number
       return weekNo;
     }
 
